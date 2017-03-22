@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <PackageVersion>1.0.9</PackageVersion>
+    <PackageVersion>1.0.0-beta-0005</PackageVersion>
   </PropertyGroup>
 
   <!--
@@ -47,7 +47,6 @@
     <PackageReference Include="Orchard.Menu" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Modules" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Mvc" Version="2.0.0" PrivateAssets="none" />
-    <PackageReference Include="Orchard.Nancy" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Navigation" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Recipes" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Resources" Version="1.0.0" PrivateAssets="none" />

@@ -239,6 +239,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CD99579D
 		src\Build.Modules\Package.Build.props = src\Build.Modules\Package.Build.props
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Modules", "src\Bundles\OrchardCore.Modules\OrchardCore.Modules.csproj", "{D13788F8-65B0-4805-9518-5C93CE350771}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Modules.Mvc", "src\Bundles\OrchardCore.Modules.Mvc\OrchardCore.Modules.Mvc.csproj", "{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Modules.Nancy", "src\Bundles\OrchardCore.Modules.Nancy\OrchardCore.Modules.Nancy.csproj", "{657373C3-0644-4A84-B21E-F678749173C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -645,6 +651,18 @@ Global
 		{FE04EACD-D32E-4E56-8684-E13788641D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE04EACD-D32E-4E56-8684-E13788641D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE04EACD-D32E-4E56-8684-E13788641D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13788F8-65B0-4805-9518-5C93CE350771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13788F8-65B0-4805-9518-5C93CE350771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13788F8-65B0-4805-9518-5C93CE350771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13788F8-65B0-4805-9518-5C93CE350771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657373C3-0644-4A84-B21E-F678749173C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657373C3-0644-4A84-B21E-F678749173C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657373C3-0644-4A84-B21E-F678749173C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657373C3-0644-4A84-B21E-F678749173C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -763,5 +781,8 @@ Global
 		{D6780869-2EDC-4B59-BF79-028D3256BD51} = {275E087F-A4E2-4A7B-A924-ED68E3A52086}
 		{FE04EACD-D32E-4E56-8684-E13788641D4E} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
 		{CD99579D-BA01-4196-968E-A250FA4A95D5} = {275E087F-A4E2-4A7B-A924-ED68E3A52086}
+		{D13788F8-65B0-4805-9518-5C93CE350771} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
+		{5E2535B7-9818-4EC2-A0D0-5BB42AC55ECA} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
+		{657373C3-0644-4A84-B21E-F678749173C2} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
 	EndGlobalSection
 EndGlobal
