@@ -231,6 +231,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bundles", "Bundles", "{D678
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardCore.Cms", "src\Bundles\OrchardCore.Cms\OrchardCore.Cms.csproj", "{FE04EACD-D32E-4E56-8684-E13788641D4E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CD99579D-BA01-4196-968E-A250FA4A95D5}"
+	ProjectSection(SolutionItems) = preProject
+		src\Build.Modules\Bundle.Build.props = src\Build.Modules\Bundle.Build.props
+		src\Build.Modules\Bundle.Build.targets = src\Build.Modules\Bundle.Build.targets
+		src\Build.Modules\Module.Build.props = src\Build.Modules\Module.Build.props
+		src\Build.Modules\Package.Build.props = src\Build.Modules\Package.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -754,5 +762,6 @@ Global
 		{04472175-8BFD-4BA6-A0E4-241F186F89CC} = {F23AC6C2-DE44-4699-999D-3C478EF3D691}
 		{D6780869-2EDC-4B59-BF79-028D3256BD51} = {275E087F-A4E2-4A7B-A924-ED68E3A52086}
 		{FE04EACD-D32E-4E56-8684-E13788641D4E} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
+		{CD99579D-BA01-4196-968E-A250FA4A95D5} = {275E087F-A4E2-4A7B-A924-ED68E3A52086}
 	EndGlobalSection
 EndGlobal

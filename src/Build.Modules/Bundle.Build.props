@@ -1,0 +1,20 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!-- 
+    Defines msbuild tasks on a Bundle package to publish all the extensions (local and packages) publish command.
+  -->
+  
+  <PropertyGroup>
+    <ApplicationData>App_Data\**</ApplicationData>
+    <IncludedFiles>Modules\**;Themes\**;Packages\**</IncludedFiles>
+    <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+    <None Include="$(ApplicationData)" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+  
+</Project>

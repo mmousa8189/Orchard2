@@ -2,25 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageVersion>1.0.9</PackageVersion>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <ApplicationData>App_Data\**</ApplicationData>
-    <IncludedFiles>Modules\**;Themes\**;Packages\**</IncludedFiles>
-    <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
-    <AllAssetFiles>Modules\**;Themes\**;Packages\**;App_Data\**</AllAssetFiles>
-  </PropertyGroup>
-
-  <Target Name="CopyPackageAssetFiles" AfterTargets="AfterBuild">
-    <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Packages\%(RecursiveDir)" />
-  </Target>
-
+  <!--
+    You can inject nuget targets and props via nuget. 
+    Say you have a package named “MyPackage”. NuGet will add an MSBuild import to 
+    build/$targetFramework/$packageId.props and build/$targetFramework/$packageId.targets. 
+    You can optionally leave out the $targetFramework subdirectory. 
+    Caution: this will make NuGet treat your packages as compatible with “any” target framework.
+  -->
   <ItemGroup>
-    <None Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
+      <PackagePath>build\netstandard1.6\OrchardCore.Cms.props</PackagePath>
     </None>
-    <None Include="$(ApplicationData)" CopyToPublishDirectory="Always" />
+    <None Include="..\..\Build.Modules\Bundle.Build.targets" Pack="true">
+      <PackagePath>build\netstandard1.6\OrchardCore.Cms.targets</PackagePath>
+    </None>
   </ItemGroup>
   
   <ItemGroup>
