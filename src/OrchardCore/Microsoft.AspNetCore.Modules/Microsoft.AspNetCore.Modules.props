@@ -1,0 +1,14 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- 
+    This file is packaged with Microsoft.AspNetCore.Modules.nupkg in ./build such that any Module that references
+    it will gets its static assets copied to $(SolutionDir).build\OrchardCorePackages
+  -->
+  <ItemGroup>
+    <PackageAssetFiles Include="**\*" Exclude="*.props;**\*.cs;*.csproj*;obj\**;bin\**;assets.json;Assets\**;Properties\**" />
+  </ItemGroup>
+
+  <Target Name="CopyPackageAssetFiles" AfterTargets="Build" Condition="'$(IsModule)' != 'false'">
+    <Message Text="Packing files for $(MSBuildProjectName): '@(PackageAssetFiles)'" Importance="high" />
+    <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(SolutionDir).build\OrchardCorePackages\$(MSBuildProjectName)\%(RecursiveDir)" />
+  </Target>
+</Project>

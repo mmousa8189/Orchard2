@@ -16,9 +16,6 @@
     <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
       <PackagePath>build\netstandard1.6\OrchardCore.Modules.Mvc.props</PackagePath>
     </None>
-    <None Include="..\..\Build.Modules\Bundle.Build.targets" Pack="true">
-      <PackagePath>build\netstandard1.6\OrchardCore.Modules.Mvc.targets</PackagePath>
-    </None>
   </ItemGroup>
   
   <ItemGroup>
