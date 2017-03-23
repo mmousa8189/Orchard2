@@ -1,0 +1,22 @@
+﻿<Project>
+
+  <!-- Inserted in all extensions to configure which files need to be packed -->
+
+  <!-- Includes the statis assets to the Nuget package -->
+  <ItemGroup>
+    <None 
+      Include="**\*" 
+      Exclude="**\*.cs;*.csproj*;obj\**;bin\**;assets.json;Assets\**;Properties\**" Pack="true">
+      <PackagePath>assets\$(PackageId)\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <!-- Includes a .props file to the Nuget package -->
+  <ItemGroup>
+    <None 
+      Include="..\..\..\Build.Modules\Package.Build.props" 
+      Pack="true">
+      <PackagePath>build\$(PackageId).props</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

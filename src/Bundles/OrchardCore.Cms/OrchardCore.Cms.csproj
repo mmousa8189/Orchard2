@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <PackageVersion>1.0.0-beta-0005</PackageVersion>
+    <PackageVersion>1.0.0-beta-0006</PackageVersion>
   </PropertyGroup>
 
   <!--
@@ -15,9 +15,6 @@
   <ItemGroup>
     <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
       <PackagePath>build\netstandard1.6\OrchardCore.Cms.props</PackagePath>
-    </None>
-    <None Include="..\..\Build.Modules\Bundle.Build.targets" Pack="true">
-      <PackagePath>build\netstandard1.6\OrchardCore.Cms.targets</PackagePath>
     </None>
   </ItemGroup>
   

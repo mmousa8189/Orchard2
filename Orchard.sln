@@ -232,8 +232,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CD99579D-BA01-4196-968E-A250FA4A95D5}"
 	ProjectSection(SolutionItems) = preProject
 		src\Build.Modules\Bundle.Build.props = src\Build.Modules\Bundle.Build.props
-		src\Build.Modules\Bundle.Build.targets = src\Build.Modules\Bundle.Build.targets
-		src\Build.Modules\Module.Build.props = src\Build.Modules\Module.Build.props
+		src\Build.Modules\Extensions.Build.props = src\Build.Modules\Extensions.Build.props
 		src\Build.Modules\Package.Build.props = src\Build.Modules\Package.Build.props
 	EndProjectSection
 EndProject
