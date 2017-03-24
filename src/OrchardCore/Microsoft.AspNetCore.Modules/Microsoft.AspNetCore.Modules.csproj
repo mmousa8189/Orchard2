@@ -33,6 +33,9 @@
     <None Include="Microsoft.AspNetCore.Modules.props" Pack="true">
       <PackagePath>build\netstandard1.6\Microsoft.AspNetCore.Modules.props</PackagePath>
     </None>
+    <None Include="Package.Build.props" Pack="true">
+      <PackagePath>build\netstandard1.6\Package.Build.props</PackagePath>
+    </None>
   </ItemGroup>
   
 </Project>

@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
     <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Mvc.Modules\Microsoft.AspNetCore.Mvc.Modules.csproj" />
     <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Extensions\Orchard.Environment.Extensions.csproj" />
   </ItemGroup>

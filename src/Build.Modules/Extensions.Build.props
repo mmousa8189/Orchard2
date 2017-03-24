@@ -16,7 +16,7 @@
     <None 
       Include="..\..\..\Build.Modules\Package.Build.props" 
       Pack="true">
-      <PackagePath>build\$(PackageId).props</PackagePath>
+      <PackagePath>build\netstandard1.6\$(PackageId).props</PackagePath>
     </None>
   </ItemGroup>
 </Project>

@@ -11,4 +11,19 @@
     <Message Text="Packing files for $(MSBuildProjectName): '@(PackageAssetFiles)'" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(SolutionDir).build\OrchardCorePackages\$(MSBuildProjectName)\%(RecursiveDir)" />
   </Target>
+
+  <!-- Intercept the Pack target to add a custom .props file to the generate module package -->
+  
+  <ItemGroup>
+    <None
+      Include="$(MSBuildThisFileDirectory)\Package.Build.props" Pack="true">
+      <PackagePath>build\netstandard1.6\$(PackageId).props</PackagePath>
+    </None>
+    <None
+      Include="**\*"
+      Exclude="**\*.cs;*.csproj*;obj\**;bin\**;assets.json;Assets\**;Properties\**" Pack="true">
+      <PackagePath>assets\$(PackageId)\</PackagePath>
+    </None>
+  </ItemGroup>
+  
 </Project>
