@@ -10,13 +10,14 @@
   </ItemGroup>
 
   <Target Name="CleanBuildFolder" AfterTargets="BeforeResolveReference">
-    <Message Text="Deleting .build folder" Importance="high" />
+    <Message Text="Deleting temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />
     <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
   </Target>
 
   <Target Name="CopyPackageAssets" AfterTargets="Build">
     <Message Text="Copying Packages assets" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Packages\%(RecursiveDir)" />
+    <Message Text="Cleaning temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />
     <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
   </Target>  
   
@@ -31,10 +32,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
     <None Include="$(ApplicationData)" CopyToPublishDirectory="Always" />
+    <None Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)" CopyToPublishDirectory="Always" />
   </ItemGroup>
   
 </Project>
