@@ -12,7 +12,10 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ModularServiceCollectionExtensions
     {
-        public static IServiceCollection AddModuleServices(this IServiceCollection services, Action<ModularServiceCollection> configure = null)
+        /// <summary>
+        /// Adds modules services to the specified <see cref="Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+        /// </summary>
+        public static IServiceCollection AddModules(this IServiceCollection services, Action<ModularServiceCollection> configure = null)
         {
             services.AddWebHost();
             services.AddManifestDefinition("Module.txt", "module");
@@ -33,7 +36,11 @@ namespace Microsoft.Extensions.DependencyInjection
             return services;
         }
 
-        public static ModularServiceCollection AddConfiguration(
+        /// <summary>
+        /// Registers a <see cref="IConfiguration"/> object that can be used by the modules.
+        /// </summary>
+        /// <returns></returns>
+        public static ModularServiceCollection WithConfiguration(
             this ModularServiceCollection modules, IConfiguration configuration)
         {
             // Register the configuration object for modules to register options with it

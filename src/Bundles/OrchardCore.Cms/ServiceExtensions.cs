@@ -20,11 +20,11 @@ namespace Microsoft.AspNetCore.Modules
             services.AddExtensionLocation("Themes");
             services.AddSitesFolder("App_Data", "Sites");
             services.AddCommands();
-            services.AddModuleServices(modules => 
+            services.AddModules(modules => 
             {
                 if (configuration != null)
                 {
-                    modules.AddConfiguration(configuration);
+                    modules.WithConfiguration(configuration);
                 }
 
                 modules.WithDefaultFeatures("Orchard.Mvc", "Orchard.Settings", "Orchard.Setup", "Orchard.Recipes", "Orchard.Commons");
