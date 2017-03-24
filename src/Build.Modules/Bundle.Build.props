@@ -6,18 +6,18 @@
   -->
 
   <ItemGroup>
-    <PackageAssetFiles Include="$(SolutionDir).build\OrchardCorePackages\**\*" />
+    <PackageAssetFiles Include="$(Temp)\OrchardCorePackages\**\*" />
   </ItemGroup>
 
   <Target Name="CleanBuildFolder" AfterTargets="BeforeResolveReference">
     <Message Text="Deleting .build folder" Importance="high" />
-    <RemoveDir Directories="$(SolutionDir).build\OrchardCorePackages" ContinueOnError="true" />
+    <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
   </Target>
 
   <Target Name="CopyPackageAssets" AfterTargets="Build">
     <Message Text="Copying Packages assets" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Packages\%(RecursiveDir)" />
-    <RemoveDir Directories="$(SolutionDir).build\OrchardCorePackages" ContinueOnError="true" />
+    <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
   </Target>  
   
   <!-- 

@@ -9,7 +9,7 @@
 
   <Target Name="CopyPackageAssetFiles" AfterTargets="Build" Condition="'$(IsModule)' != 'false'">
     <Message Text="Packing files for $(MSBuildProjectName): '@(PackageAssetFiles)'" Importance="high" />
-    <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(SolutionDir).build\OrchardCorePackages\$(MSBuildProjectName)\%(RecursiveDir)" />
+    <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\%(RecursiveDir)" />
   </Target>
 
   <!-- Intercept the Pack target to add a custom .props file to the generate module package -->
