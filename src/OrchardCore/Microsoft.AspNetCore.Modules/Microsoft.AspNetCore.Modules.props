@@ -19,7 +19,8 @@
             File="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\Module.txt"
             Lines="$(ModuleManifest)"
             Overwrite="true"
-            Encoding="Unicode"/>
+            Encoding="Unicode"
+            ContinueOnError="true" />
   </Target>
 
   <!-- Adds a custom .props file to the generated module package -->

@@ -14,10 +14,7 @@
   -->
   <ItemGroup>
     <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
-      <PackagePath>build\netstandard1.6\OrchardCore.Modules.Nancy.props</PackagePath>
-    </None>
-    <None Include="..\..\Build.Modules\Bundle.Build.targets" Pack="true">
-      <PackagePath>build\netstandard1.6\OrchardCore.Modules.Nancy.targets</PackagePath>
+      <PackagePath>build\netstandard1.6\$(PackageId).props</PackagePath>
     </None>
   </ItemGroup>
   

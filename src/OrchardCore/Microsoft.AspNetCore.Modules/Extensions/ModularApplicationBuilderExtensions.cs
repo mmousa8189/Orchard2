@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Modules;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Orchard.Environment.Extensions;
 
-namespace Microsoft.AspNetCore.Modules
+namespace Microsoft.AspNetCore.Builder
 {
     public static class ModularApplicationBuilderExtensions
     {

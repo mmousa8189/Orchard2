@@ -1,26 +1,31 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Modules;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Orchard.Environment.Extensions;
 using Orchard.Environment.Extensions.Manifests;
 using Orchard.Environment.Shell;
 using Orchard.Environment.Shell.Descriptor.Models;
 
-namespace Microsoft.AspNetCore.Modules
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ModularServiceCollectionExtensions
     {
-        public static IServiceCollection AddModuleServices(this IServiceCollection services, Action<ModularServiceCollection> configure)
+        public static IServiceCollection AddModuleServices(this IServiceCollection services, Action<ModularServiceCollection> configure = null)
         {
             services.AddWebHost();
             services.AddManifestDefinition("Module.txt", "module");
             services.AddExtensionLocation("Modules");
             services.AddExtensionLocation("Packages");
 
-            // Register custom services specific to modules
             var modularServiceCollection = new ModularServiceCollection(services);
-            configure(modularServiceCollection);
+
+            // Use a single tenant and all features by default
+            modularServiceCollection.WithAllFeatures();
+
+            // Let the app change the default tenant behavior and set of features
+            configure?.Invoke(modularServiceCollection);
 
             // Register the list of services to be resolved later on
             services.AddSingleton(_ => services);
@@ -40,6 +45,10 @@ namespace Microsoft.AspNetCore.Modules
             return modules;
         }
 
+        /// <summary>
+        /// Registers a default tenant with a set of features that are used to setup and configure the actual tenants.
+        /// For instance you can use this to add a custom Setup module.
+        /// </summary>
         public static ModularServiceCollection WithDefaultFeatures(
             this ModularServiceCollection modules, params string[] featureIds)
         {
@@ -55,10 +64,9 @@ namespace Microsoft.AspNetCore.Modules
         }
 
         /// <summary>
-        /// Enables all available features.
+        /// Registers a single tenant with all the available features. This is the default behavior.
         /// </summary>
-        public static ModularServiceCollection WithAllFeatures(
-            this ModularServiceCollection modules)
+        public static ModularServiceCollection WithAllFeatures(this ModularServiceCollection modules)
         {
             modules.Configure(services =>
             {
@@ -69,20 +77,22 @@ namespace Microsoft.AspNetCore.Modules
         }
 
         /// <summary>
-        /// Enables all available features.
+        /// Registers a single tenant with the specified set of features.
         /// </summary>
-        public static ModularServiceCollection WithSetFeatures(
+        public static ModularServiceCollection WithFeatures(
             this ModularServiceCollection modules,
             params string[] featureIds)
         {
+            var featuresList = featureIds.Select(featureId => new ShellFeature(featureId)).ToList();
+
             modules.Configure(services =>
             {
-                foreach (var featureId in featureIds)
+                foreach (var feature in featuresList)
                 {
-                    services.AddTransient(sp => new ShellFeature(featureId));
+                    services.AddTransient(sp => feature);
                 };
 
-                services.AddSetFeaturesDescriptor();
+                services.AddSetFeaturesDescriptor(featuresList);
             });
 
             return modules;
@@ -95,7 +105,7 @@ namespace Microsoft.AspNetCore.Modules
             services.AddOptions();
             services.AddLocalization();
             services.AddHostingShellServices();
-            services.AddExtensionManagerHost("App_Data", "dependencies");
+            services.AddExtensionManagerHost();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IClock, Clock>();

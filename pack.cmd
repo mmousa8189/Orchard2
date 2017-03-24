@@ -97,3 +97,6 @@ dotnet pack "src\Orchard.Cms.Web\Themes\TheBlogTheme" -c Release -o "%curpath%\a
 dotnet pack "src\Orchard.Cms.Web\Themes\TheTheme" -c Release -o "%curpath%\artifacts\Extensions"
 
 dotnet pack "src\Bundles\OrchardCore.Cms" -c Release -o "%curpath%\artifacts\Bundles"
+dotnet pack "src\Bundles\OrchardCore.Modules" -c Release -o "%curpath%\artifacts\Bundles"
+dotnet pack "src\Bundles\OrchardCore.Modules.Mvc" -c Release -o "%curpath%\artifacts\Bundles"
+dotnet pack "src\Bundles\OrchardCore.Modules.Nancy" -c Release -o "%curpath%\artifacts\Bundles"
