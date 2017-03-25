@@ -35,6 +35,8 @@ namespace Orchard.Cms.Web
 
             services.AddCommands();
 
+            services.AddAuthentication();
+
             services.AddModules(configure => configure
                 .WithConfiguration(Configuration)
                 .WithDefaultFeatures("Orchard.Mvc", "Orchard.Settings", "Orchard.Setup", "Orchard.Recipes", "Orchard.Commons")
@@ -49,8 +51,12 @@ namespace Orchard.Cms.Web
             }
 
             app.UseStaticFiles();
-
             loggerFactory.AddConsole(Configuration);
+
+            if (env.IsDevelopment())
+            {
+                loggerFactory.AddDebug();
+            }
 
             app.UseModules();
         }

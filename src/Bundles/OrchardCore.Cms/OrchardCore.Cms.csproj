@@ -45,8 +45,10 @@
     <PackageReference Include="Orchard.Modules" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Mvc" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Navigation" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.OpenId" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Recipes" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Resources" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.ResponseCache" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Roles" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Scripting" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Settings" Version="2.0.0" PrivateAssets="none" />

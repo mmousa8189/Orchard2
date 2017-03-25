@@ -6,7 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Orchard.Environment.Extensions;
 using Orchard.Environment.Extensions.Manifests;
 using Orchard.Environment.Shell;
+using Orchard.Environment.Shell.Descriptor;
 using Orchard.Environment.Shell.Descriptor.Models;
+using Orchard.Environment.Shell.Descriptor.Settings;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -65,6 +67,17 @@ namespace Microsoft.Extensions.DependencyInjection
                 {
                     services.AddTransient(sp => new ShellFeature(featureId));
                 };
+            });
+
+            return modules;
+        }
+
+        public static ModularServiceCollection WithConfiguredTenantsAndFeatures(this ModularServiceCollection modules)
+        {
+            modules.Configure(services =>
+            {
+                services.AddScoped<IShellSettingsManager, FileShellSettingsManager>();
+                services.AddScoped<IShellDescriptorManager, FileShellDescriptorManager>();
             });
 
             return modules;
