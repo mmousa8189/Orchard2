@@ -72,7 +72,10 @@ namespace Microsoft.Extensions.DependencyInjection
             return modules;
         }
 
-        public static ModularServiceCollection WithConfiguredTenantsAndFeatures(this ModularServiceCollection modules)
+        /// <summary>
+        /// Registers tenants defined in configuration.
+        /// </summary>
+        public static ModularServiceCollection WithTenants(this ModularServiceCollection modules)
         {
             modules.Configure(services =>
             {
