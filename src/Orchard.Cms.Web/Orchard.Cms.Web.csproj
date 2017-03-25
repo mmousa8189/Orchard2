@@ -21,10 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </None>
-    <None Include="$(ApplicationData)" CopyToPublishDirectory="Always" />
+    <ResolvedFileToPublish Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
+      <RelativePath>%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+    </ResolvedFileToPublish>
+    <ResolvedFileToPublish Include="$(ApplicationData)">
+      <RelativePath>%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+    </ResolvedFileToPublish>
   </ItemGroup>
 
   <ItemGroup>
