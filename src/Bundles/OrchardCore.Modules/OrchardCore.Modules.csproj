@@ -2,22 +2,31 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <PackageVersion>1.0.0-beta-0001</PackageVersion>
+    <PackageVersion>1.0.0-beta-0002</PackageVersion>
+    <IsBundle>true</IsBundle>
   </PropertyGroup>
 
-  <!--
-    You can inject nuget targets and props via nuget. 
-    Say you have a package named “MyPackage”. NuGet will add an MSBuild import to 
-    build/$targetFramework/$packageId.props and build/$targetFramework/$packageId.targets. 
-    You can optionally leave out the $targetFramework subdirectory. 
-    Caution: this will make NuGet treat your packages as compatible with “any” target framework.
-  -->
   <ItemGroup>
-    <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
-      <PackagePath>build\netstandard1.6\$(PackageId).props</PackagePath>
-    </None>
+    <PackageReference Include="Orchard.Admin" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Commons" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Diagnostics" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.DynamicCache" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Modules" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Mvc" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Nancy" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Navigation" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Recipes" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Resources" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Roles" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Scripting" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Settings" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Setup" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Tenants" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Themes" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Users" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="OrchardCore.Bundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
     <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Extensions\Orchard.Environment.Extensions.csproj" />

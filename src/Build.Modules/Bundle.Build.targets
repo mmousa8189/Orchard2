@@ -14,7 +14,7 @@
     <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
   </Target>
 
-  <Target Name="CopyPackageAssets" AfterTargets="Build">
+  <Target Name="CopyPackageAssets" AfterTargets="Build" Condition="'$(IsBundle)' != 'true'">
     <Message Text="Copying Packages assets" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Packages\%(RecursiveDir)" />
     <Message Text="Cleaning temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />

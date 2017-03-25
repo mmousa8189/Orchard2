@@ -2,22 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <PackageVersion>1.0.0-beta-0006</PackageVersion>
+    <PackageVersion>1.0.0-beta-0007</PackageVersion>
+    <IsBundle>true</IsBundle>
   </PropertyGroup>
 
-  <!--
-    You can inject nuget targets and props via nuget. 
-    Say you have a package named “MyPackage”. NuGet will add an MSBuild import to 
-    build/$targetFramework/$packageId.props and build/$targetFramework/$packageId.targets. 
-    You can optionally leave out the $targetFramework subdirectory. 
-    Caution: this will make NuGet treat your packages as compatible with “any” target framework.
-  -->
-  <ItemGroup>
-    <None Include="..\..\Build.Modules\Bundle.Build.props" Pack="true">
-      <PackagePath>build\netstandard1.6\$(PackageId).props</PackagePath>
-    </None>
-  </ItemGroup>
-  
   <ItemGroup>
     <PackageReference Include="Orchard.Admin" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Alias" Version="2.0.0" PrivateAssets="none" />
@@ -59,6 +47,7 @@
     <PackageReference Include="Orchard.Users" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Widgets" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.XmlRpc" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="OrchardCore.Bundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
     <PackageReference Include="SafeMode" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheAdmin" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheBlogTheme" Version="1.0.0" PrivateAssets="none" />
