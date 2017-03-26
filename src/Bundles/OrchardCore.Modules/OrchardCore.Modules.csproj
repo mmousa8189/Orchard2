@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OrchardCore.AsBundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
     <PackageReference Include="Orchard.Admin" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Commons" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Diagnostics" Version="2.0.0" PrivateAssets="none" />
@@ -24,11 +25,6 @@
     <PackageReference Include="Orchard.Tenants" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Themes" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Users" Version="2.0.0" PrivateAssets="none" />
-    <PackageReference Include="OrchardCore.Bundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
-    <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Extensions\Orchard.Environment.Extensions.csproj" />
-  </ItemGroup>
 </Project>

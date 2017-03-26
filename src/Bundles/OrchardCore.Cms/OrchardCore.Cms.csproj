@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OrchardCore.AsBundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
     <PackageReference Include="Orchard.Admin" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Alias" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Autoroute" Version="2.0.0" PrivateAssets="none" />
@@ -47,16 +48,10 @@
     <PackageReference Include="Orchard.Users" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Widgets" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.XmlRpc" Version="2.0.0" PrivateAssets="none" />
-    <PackageReference Include="OrchardCore.Bundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
     <PackageReference Include="SafeMode" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheAdmin" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheBlogTheme" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheTheme" Version="1.0.0" PrivateAssets="none" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Mvc.Modules\Microsoft.AspNetCore.Mvc.Modules.csproj" />
-    <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Extensions\Orchard.Environment.Extensions.csproj" />
-  </ItemGroup>
 </Project>

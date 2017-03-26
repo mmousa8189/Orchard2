@@ -25,17 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../OrchardCore/Orchard.Environment.Shell.Data/Orchard.Environment.Shell.Data.csproj" />
-    <ProjectReference Include="../OrchardCore/Orchard.Hosting.Console/Orchard.Hosting.Console.csproj" />
-    <ProjectReference Include="../OrchardCore/Microsoft.AspNetCore.Modules/Microsoft.AspNetCore.Modules.csproj" />
-    <ProjectReference Include="../OrchardCore/Microsoft.AspNetCore.Mvc.Modules/Microsoft.AspNetCore.Mvc.Modules.csproj" />
-    <ProjectReference Include="Themes\SafeMode\SafeMode.csproj" />
-    <ProjectReference Include="Themes\TheAdmin\TheAdmin.csproj" />
-    <ProjectReference Include="Themes\TheBlogTheme\TheBlogTheme.csproj" />
-    <ProjectReference Include="Themes\TheTheme\TheTheme.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="1.1.1" />
@@ -44,8 +33,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="1.1.1" />
-    <PackageReference Include="OrchardCore.Modules" Version="1.0.0-beta-0002" />
+    <PackageReference Include="Orchard.Hosting.Console" Version="2.0.0" />
     <PackageReference Include="OrchardCore.Cms" Version="1.0.0-beta-0007" />
     <PackageReference Include="OrchardCore.HelloWorld" Version="1.0.0" />
+    <PackageReference Include="OrchardCore.Modules" Version="1.0.0-beta-0002" />
   </ItemGroup>
+
 </Project>

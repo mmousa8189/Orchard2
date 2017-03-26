@@ -13,7 +13,7 @@
     Caution: this will make NuGet treat your packages as compatible with “any” target framework.
   -->
   <ItemGroup>
-    <None Include="..\..\Build.Modules\Bundle.Build.targets" Pack="true">
+    <None Include="Bundle.Build.targets" Pack="true">
       <PackagePath>build\netstandard1.6\$(PackageId).targets</PackagePath>
     </None>
   </ItemGroup>
