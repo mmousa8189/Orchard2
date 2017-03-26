@@ -27,15 +27,5 @@
     <PackageReference Include="Microsoft.Extensions.Localization" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.1" />
   </ItemGroup>
-
-  <!-- Add the Microsoft.AspNetCore.Modules.props file in the package -->
-  <ItemGroup>
-    <None Include="Microsoft.AspNetCore.Modules.props" Pack="true">
-      <PackagePath>build\netstandard1.6\Microsoft.AspNetCore.Modules.props</PackagePath>
-    </None>
-    <None Include="Package.Build.props" Pack="true">
-      <PackagePath>build\netstandard1.6\Package.Build.props</PackagePath>
-    </None>
-  </ItemGroup>
   
 </Project>

@@ -14,6 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Modules.Projects\**" />
+    <Content Remove="Modules.Projects\**" />
+    <EmbeddedResource Remove="Modules.Projects\**" />
+    <None Remove="Modules.Projects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -27,6 +34,7 @@
     <ProjectReference Include="Themes\TheBlogTheme\TheBlogTheme.csproj" />
     <ProjectReference Include="Themes\TheTheme\TheTheme.csproj" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.1.1" />

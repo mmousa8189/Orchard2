@@ -231,10 +231,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardCore.Cms", "src\Bund
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CD99579D-BA01-4196-968E-A250FA4A95D5}"
 	ProjectSection(SolutionItems) = preProject
-		src\Build.Modules\Bundle.Build.props = src\Build.Modules\Bundle.Build.props
 		src\Build.Modules\Bundle.Build.targets = src\Build.Modules\Bundle.Build.targets
-		src\Build.Modules\Extensions.Build.props = src\Build.Modules\Extensions.Build.props
-		src\Build.Modules\Package.Build.props = src\Build.Modules\Package.Build.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Modules", "src\Bundles\OrchardCore.Modules\OrchardCore.Modules.csproj", "{D13788F8-65B0-4805-9518-5C93CE350771}"
@@ -246,6 +243,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchard.Cms.Web", "src\Orchard.Cms.Web\Orchard.Cms.Web.csproj", "{9D78FE2C-4179-47F6-B28A-034868280197}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Bundle", "src\Bundles\OrchardCore.Bundle\OrchardCore.Bundle.csproj", "{1F4451B5-0E3C-4B64-866B-60A648E2B4D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Module", "src\OrchardCore\OrchardCore.Module\OrchardCore.Module.csproj", "{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -669,6 +668,10 @@ Global
 		{1F4451B5-0E3C-4B64-866B-60A648E2B4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F4451B5-0E3C-4B64-866B-60A648E2B4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F4451B5-0E3C-4B64-866B-60A648E2B4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -791,5 +794,6 @@ Global
 		{657373C3-0644-4A84-B21E-F678749173C2} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
 		{9D78FE2C-4179-47F6-B28A-034868280197} = {275E087F-A4E2-4A7B-A924-ED68E3A52086}
 		{1F4451B5-0E3C-4B64-866B-60A648E2B4D8} = {D6780869-2EDC-4B59-BF79-028D3256BD51}
+		{C5FAFB8C-E0AB-4587-A79A-4CE476125CF7} = {F23AC6C2-DE44-4699-999D-3C478EF3D691}
 	EndGlobalSection
 EndGlobal

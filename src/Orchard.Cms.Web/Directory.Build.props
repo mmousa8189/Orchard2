@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\Build.Modules\Extensions.Build.props" />
-</Project>
