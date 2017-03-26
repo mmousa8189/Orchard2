@@ -27,10 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.1.0" />
     <PackageReference Include="Lucene.Net.Core" Version="4.8.0-alpha" />
     <PackageReference Include="Lucene.Net.Analysis.Common" Version="4.8.0-alpha" />
     <PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-alpha" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta-0001" />
   </ItemGroup>
 
 </Project>

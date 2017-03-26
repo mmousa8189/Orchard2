@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageAssetFiles Include="**\*" Exclude="***\*.cs;*.csproj*;obj\**;bin\**;assets.json;Assets\**;Properties\**" />
+    <PackageAssetFiles Include="**\*" Exclude="**\*.cs;*.csproj*;obj\**;bin\**;Assets.json;Assets\**;Properties\**;*.props;*.targets" />
   </ItemGroup>
 
   <Target Name="CopyPackageAssetFiles" AfterTargets="Build">

@@ -17,7 +17,6 @@ namespace Microsoft.AspNetCore.Modules
         public static IServiceCollection AddOrchardCms(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddManifestDefinition("Theme.txt", "theme");
-            services.AddExtensionLocation("Themes");
             services.AddSitesFolder("App_Data", "Sites");
             services.AddCommands();
             services.AddModules(modules => 

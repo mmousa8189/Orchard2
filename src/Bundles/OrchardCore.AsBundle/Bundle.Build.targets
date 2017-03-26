@@ -27,8 +27,8 @@
   
   <PropertyGroup>
     <ApplicationData>App_Data\**</ApplicationData>
-    <IncludedFiles>Modules\**;Themes\**;Packages\**</IncludedFiles>
-    <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
+    <IncludedFiles>Packages\**</IncludedFiles>
+    <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\Assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
   </PropertyGroup>
   
   <ItemGroup>

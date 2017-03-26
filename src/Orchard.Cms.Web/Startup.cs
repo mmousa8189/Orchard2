@@ -30,7 +30,6 @@ namespace Orchard.Cms.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddManifestDefinition("Theme.txt", "theme");
-            services.AddExtensionLocation("Themes");
             services.AddSitesFolder("App_Data", "Sites");
 
             services.AddCommands();
