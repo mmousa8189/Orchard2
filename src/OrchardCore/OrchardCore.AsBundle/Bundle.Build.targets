@@ -26,17 +26,15 @@
   -->
   
   <PropertyGroup>
-    <ApplicationData>App_Data\**</ApplicationData>
-    <IncludedFiles>Packages\**</IncludedFiles>
     <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\Assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
   </PropertyGroup>
   
   <ItemGroup>
-    <ResolvedFileToPublish Include="$(IncludedFiles)" Exclude="$(ExcludedFiles)">
-      <RelativePath>%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+    <ResolvedFileToPublish Include="Packages\**" Exclude="$(ExcludedFiles)">
+      <RelativePath>Packages\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
     </ResolvedFileToPublish>
-    <ResolvedFileToPublish Include="$(ApplicationData)">
-      <RelativePath>%(RelativeDir)%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+    <ResolvedFileToPublish Include="App_Data\**">
+      <RelativePath>App_Data\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
     </ResolvedFileToPublish>
   </ItemGroup>
   
