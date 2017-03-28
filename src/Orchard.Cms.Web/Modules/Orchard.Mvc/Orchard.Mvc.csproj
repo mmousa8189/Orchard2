@@ -19,8 +19,4 @@
     <ProjectReference Include="..\..\..\OrchardCore\Microsoft.AspNetCore.Mvc.Modules\Microsoft.AspNetCore.Mvc.Modules.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta-0001" />
-  </ItemGroup>
-
 </Project>

@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta-0001" />
     <PackageReference Include="YesSql.Core" Version="2.0.0-beta-0013" />
   </ItemGroup>
 

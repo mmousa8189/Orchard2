@@ -18,8 +18,4 @@
     <ProjectReference Include="..\..\..\OrchardCore\Microsoft.AspNetCore.Nancy.Modules\Microsoft.AspNetCore.Nancy.Modules.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta-0001" />
-  </ItemGroup>
-
 </Project>
