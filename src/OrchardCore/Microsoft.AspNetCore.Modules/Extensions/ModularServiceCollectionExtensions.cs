@@ -6,7 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Orchard.Environment.Extensions;
 using Orchard.Environment.Extensions.Manifests;
 using Orchard.Environment.Shell;
+using Orchard.Environment.Shell.Descriptor;
 using Orchard.Environment.Shell.Descriptor.Models;
+using Orchard.Environment.Shell.Descriptor.Settings;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -19,6 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             services.AddWebHost();
             services.AddManifestDefinition("Module.txt", "module");
+            services.AddExtensionLocation("Modules");
             services.AddExtensionLocation("Packages");
 
             var modularServiceCollection = new ModularServiceCollection(services);
@@ -64,6 +67,20 @@ namespace Microsoft.Extensions.DependencyInjection
                 {
                     services.AddTransient(sp => new ShellFeature(featureId));
                 };
+            });
+
+            return modules;
+        }
+
+        /// <summary>
+        /// Registers tenants defined in configuration.
+        /// </summary>
+        public static ModularServiceCollection WithTenants(this ModularServiceCollection modules)
+        {
+            modules.Configure(services =>
+            {
+                services.AddScoped<IShellSettingsManager, FileShellSettingsManager>();
+                services.AddScoped<IShellDescriptorManager, FileShellDescriptorManager>();
             });
 
             return modules;
