@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.AsBundle" Version="1.0.0-beta-0001" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Admin" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Alias" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Autoroute" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Body" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Commons" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.ContentFields" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.ContentPreview" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Contents" Version="2.0.0" PrivateAssets="none" />
@@ -18,6 +20,8 @@
     <PackageReference Include="Orchard.Demo" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Deployment" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Deployment.Remote" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Diagnostics" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.DynamicCache" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Feeds" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Flows" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.HomeRoute" Version="2.0.0" PrivateAssets="none" />
@@ -27,15 +31,34 @@
     <PackageReference Include="Orchard.Lucene" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Markdown" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Menu" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Modules" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Mvc" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Nancy" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Navigation" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Recipes" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Resources" Version="1.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Roles" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Scripting" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Settings" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Setup" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Tenants" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Themes" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Title" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Tokens" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Tokens.Content" Version="2.0.0" PrivateAssets="none" />
+    <PackageReference Include="Orchard.Users" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.Widgets" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="Orchard.XmlRpc" Version="2.0.0" PrivateAssets="none" />
     <PackageReference Include="SafeMode" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheAdmin" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheBlogTheme" Version="1.0.0" PrivateAssets="none" />
     <PackageReference Include="TheTheme" Version="1.0.0" PrivateAssets="none" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
+    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Mvc.Modules\Microsoft.AspNetCore.Mvc.Modules.csproj" />
+    <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Shell.Data\Orchard.Environment.Shell.Data.csproj" />
   </ItemGroup>
 
 </Project>

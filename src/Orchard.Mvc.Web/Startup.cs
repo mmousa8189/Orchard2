@@ -26,10 +26,15 @@ namespace Orchard.Mvc.Web
         public void ConfigureServices(IServiceCollection services)
         {
             // Add ASP.NET MVC and support for modules
-            services.AddModule(configure => configure
-                .WithConfiguration(Configuration)
-                .WithAllFeatures()
-            );
+            services.AddModules(modules =>
+            {
+                if (Configuration != null)
+                {
+                    modules.WithConfiguration(Configuration);
+                }
+
+                modules.WithDefaultFeatures();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
