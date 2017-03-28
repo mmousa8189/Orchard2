@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../OrchardCore/Orchard.Hosting.Console/Orchard.Hosting.Console.csproj" />
+    <ProjectReference Include="..\OrchardCore\Orchard.Hosting.Console\Orchard.Hosting.Console.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Admin\Orchard.Admin.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Alias\Orchard.Alias.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Autoroute\Orchard.Autoroute.csproj" />
@@ -46,7 +46,6 @@
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Menu\Orchard.Menu.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Modules\Orchard.Modules.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Mvc\Orchard.Mvc.csproj" />
-    <ProjectReference Include="..\OrchardCore.Modules\Orchard.Nancy\Orchard.Nancy.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Navigation\Orchard.Navigation.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Recipes\Orchard.Recipes.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Resources\Orchard.Resources.csproj" />
@@ -77,7 +76,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="1.1.1" />
-    <PackageReference Include="OrchardCore.HelloWorld" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
