@@ -21,9 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../OrchardCore/Orchard.Hosting.Console/Orchard.Hosting.Console.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Admin\Orchard.Admin.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Alias\Orchard.Alias.csproj" />
     <ProjectReference Include="..\OrchardCore.Modules\Orchard.Autoroute\Orchard.Autoroute.csproj" />
@@ -80,6 +77,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="1.1.1" />
+    <PackageReference Include="OrchardCore.HelloWorld" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

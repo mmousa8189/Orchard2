@@ -55,10 +55,4 @@
     <PackageReference Include="TheTheme" Version="1.0.0" PrivateAssets="none" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Modules\Microsoft.AspNetCore.Modules.csproj" />
-    <ProjectReference Include="..\..\OrchardCore\Microsoft.AspNetCore.Mvc.Modules\Microsoft.AspNetCore.Mvc.Modules.csproj" />
-    <ProjectReference Include="..\..\OrchardCore\Orchard.Environment.Shell.Data\Orchard.Environment.Shell.Data.csproj" />
-  </ItemGroup>
-
 </Project>
