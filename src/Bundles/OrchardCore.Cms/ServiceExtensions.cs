@@ -5,7 +5,7 @@ using Orchard.Environment.Extensions;
 using Orchard.Environment.Extensions.Manifests;
 using Orchard.Environment.Shell.Data;
 
-namespace Microsoft.AspNetCore.Modules
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceExtensions
     {
