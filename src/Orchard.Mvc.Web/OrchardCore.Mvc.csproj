@@ -5,7 +5,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AllAssetFiles>Packages\**;App_Data\**</AllAssetFiles>
+    <AllAssetFiles>Packages\**</AllAssetFiles>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,4 +39,5 @@
     <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="1.1.1" />
   </ItemGroup>
+
 </Project>
