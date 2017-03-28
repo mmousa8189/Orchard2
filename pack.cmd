@@ -75,9 +75,11 @@ dotnet pack "src\OrchardCore.Modules\Orchard.Menu" -c Release -o "%curpath%\arti
 dotnet pack "src\OrchardCore.Modules\Orchard.Modules" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Mvc" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Nancy" -c Release -o "%curpath%\artifacts\Extensions"
+dotnet pack "src\OrchardCore.Modules\Orchard.OpenId" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Navigation" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Recipes" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Resources" -c Release -o "%curpath%\artifacts\Extensions"
+dotnet pack "src\OrchardCore.Modules\Orchard.ResponseCache" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Roles" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Scripting" -c Release -o "%curpath%\artifacts\Extensions"
 dotnet pack "src\OrchardCore.Modules\Orchard.Settings" -c Release -o "%curpath%\artifacts\Extensions"
@@ -100,7 +102,6 @@ dotnet pack "src\Bundles\OrchardCore.Cms" -c Release -o "%curpath%\artifacts\Bun
 dotnet pack "src\Bundles\OrchardCore.Modules" -c Release -o "%curpath%\artifacts\Bundles"
 dotnet pack "src\Bundles\OrchardCore.Modules.Mvc" -c Release -o "%curpath%\artifacts\Bundles"
 dotnet pack "src\Bundles\OrchardCore.Modules.Nancy" -c Release -o "%curpath%\artifacts\Bundles"
-
 
 dotnet pack "src\OrchardCore\OrchardCore.AsBundle" -c Release -o "%curpath%\artifacts\Aspects"
 dotnet pack "src\OrchardCore\OrchardCore.AsModule" -c Release -o "%curpath%\artifacts\Aspects"

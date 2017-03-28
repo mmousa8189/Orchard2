@@ -227,6 +227,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchard.Mvc.HelloWorld", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchard.Nancy.HelloWorld", "src\OrchardCore.Modules\Orchard.Nancy.HelloWorld\Orchard.Nancy.HelloWorld.csproj", "{B2CD782C-18A5-433C-A779-543A434760E0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchard.OpenId", "src\OrchardCore.Modules\Orchard.OpenId\Orchard.OpenId.csproj", "{A02A9CF9-5681-44BA-986D-F100D0A51495}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchard.ResponseCache", "src\OrchardCore.Modules\Orchard.ResponseCache\Orchard.ResponseCache.csproj", "{A4A2B921-9A08-4462-8C62-D5EDF078E72D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -629,6 +633,14 @@ Global
 		{B2CD782C-18A5-433C-A779-543A434760E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2CD782C-18A5-433C-A779-543A434760E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2CD782C-18A5-433C-A779-543A434760E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02A9CF9-5681-44BA-986D-F100D0A51495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02A9CF9-5681-44BA-986D-F100D0A51495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02A9CF9-5681-44BA-986D-F100D0A51495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02A9CF9-5681-44BA-986D-F100D0A51495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A2B921-9A08-4462-8C62-D5EDF078E72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A2B921-9A08-4462-8C62-D5EDF078E72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A2B921-9A08-4462-8C62-D5EDF078E72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A2B921-9A08-4462-8C62-D5EDF078E72D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -744,5 +756,7 @@ Global
 		{964ABC5F-41DC-407D-8C33-E1AD71959A73} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
 		{D5BBB6A8-9BB5-4D2C-99B4-D47D8BAD6DB2} = {75B5432E-7851-4FCB-BC87-20ABEEDDBE19}
 		{B2CD782C-18A5-433C-A779-543A434760E0} = {D1EC1E7A-8233-4527-A79E-B6ECE9DBB469}
+		{A02A9CF9-5681-44BA-986D-F100D0A51495} = {A066395F-6F73-45DC-B5A6-B4E306110DCE}
+		{A4A2B921-9A08-4462-8C62-D5EDF078E72D} = {A066395F-6F73-45DC-B5A6-B4E306110DCE}
 	EndGlobalSection
 EndGlobal
