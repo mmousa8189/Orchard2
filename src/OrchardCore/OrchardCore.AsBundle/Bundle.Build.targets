@@ -1,43 +1,34 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-
-  <!-- 
+  <!--
     Defines msbuild tasks on a Bundle package to copy all extensions assets to the project folder.
   -->
 
-  <ItemGroup>
-    <PackageAssetFiles Include="$(Temp)\OrchardCorePackages\**\*" />
-  </ItemGroup>
-
-  <Target Name="CleanBuildFolder" AfterTargets="BeforeResolveReference">
-    <Message Text="Deleting temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />
-    <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
-  </Target>
-
   <Target Name="CopyPackageAssets" AfterTargets="Build" Condition="'$(IsBundle)' != 'true'">
+    <ItemGroup>
+      <PackageAssetFiles Include="$(Temp)\OrchardCorePackages\**\$([System.IO.Path]::GetFileName(
+             $([System.IO.Path]::GetDirectoryName(%(ProjectReference.Directory)))))\**\*" />
+    </ItemGroup>
     <Message Text="Copying Packages assets" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)"
           DestinationFolder="$(MSBuildProjectDirectory)\Packages\%(RecursiveDir)"
           ContinueOnError="true" />
-    <Message Text="Cleaning temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />
+  </Target>
+
+  <Target Name="CleanPackageAssets" AfterTargets="Clean" Condition="'$(IsBundle)' != 'true'">
+    <Message Text="Cleaning Packages assets and temp package folder '$(Temp)\OrchardCorePackages'" Importance="high" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\Packages" ContinueOnError="true" />
     <RemoveDir Directories="$(Temp)\OrchardCorePackages" ContinueOnError="true" />
-  </Target>  
-  
-  <!-- 
+  </Target>
+
+  <!--
     Defines msbuild tasks on a Bundle package to publish all the extensions (local and packages) publish command.
   -->
-  
-  <PropertyGroup>
-    <ExcludedFiles>**\*.cs;**\*.csproj*;**\obj\**;**\bin\**;**\Assets.json;**\Assets\**;**\Properties\**;**\*.props;**\*.targets</ExcludedFiles>
-  </PropertyGroup>
-  
+
   <ItemGroup>
-    <ResolvedFileToPublish Include="Packages\**" Exclude="$(ExcludedFiles)">
-      <RelativePath>Packages\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
-    </ResolvedFileToPublish>
-    <ResolvedFileToPublish Include="App_Data\**">
+    <ResolvedFileToPublish Include="App_Data\**;Packages\**">
       <RelativePath>App_Data\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
     </ResolvedFileToPublish>
   </ItemGroup>
-  
+
 </Project>

@@ -6,21 +6,22 @@
 
   <PropertyGroup>
     <ModuleManifest>Name: $(MSBuildProjectName)</ModuleManifest>
+    <ExcludedFiles>**\*.cs;*.csproj*;obj\**;bin\**;Assets.json;Assets\**;Properties\**;*.props;*.targets;.vs\**</ExcludedFiles>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageAssetFiles Include="**\*" Exclude="**\*.cs;*.csproj*;obj\**;bin\**;Assets.json;Assets\**;Properties\**;*.props;*.targets" />
+    <PackageAssetFiles Include="**\*" Exclude="$(ExcludedFiles)" />
   </ItemGroup>
 
   <Target Name="CopyPackageAssetFiles" AfterTargets="Build">
     <Message Text="Packing files for $(MSBuildProjectName): '@(PackageAssetFiles)'" Importance="high" />
     <Copy SourceFiles="@(PackageAssetFiles)" DestinationFolder="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\%(RecursiveDir)" />
     <WriteLinesToFile Condition="!Exists('$(MSBuildProjectDirectory)\Module.txt') and !Exists('$(MSBuildProjectDirectory)\Theme.txt')"
-            File="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\Module.txt"
-            Lines="$(ModuleManifest)"
-            Overwrite="true"
-            Encoding="Unicode"
-            ContinueOnError="true" />
+        File="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\Module.txt"
+        Lines="$(ModuleManifest)"
+        Overwrite="true"
+        Encoding="Unicode"
+        ContinueOnError="true" />
   </Target>
 
   <!-- Adds a custom .props file to the generated module package -->
@@ -32,7 +33,7 @@
     </None>
     <None
       Include="**\*"
-      Exclude="**\*.cs;*.csproj*;obj\**;bin\**;Assets.json;Assets\**;Properties\**;*.props;*.targets" Pack="true">
+      Exclude="$(ExcludedFiles)" Pack="true">
       <PackagePath>assets\$(PackageId)\</PackagePath>
     </None>
     <None
