@@ -44,7 +44,7 @@
     <None Include="**\*" Exclude="$(ExcludedFiles)" Pack="true">
       <PackagePath>assets\$(PackageId)\</PackagePath>
     </None>
-    <None Include="$(ThemeManifestFilename)" Pack="true">
+    <None Include="$(Temp)\OrchardCorePackages\$(MSBuildProjectName)\Theme.txt" Pack="true">
       <PackagePath>assets\$(PackageId)\Theme.txt</PackagePath>
     </None>
   </ItemGroup>
